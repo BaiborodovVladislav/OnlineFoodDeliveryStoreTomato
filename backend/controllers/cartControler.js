@@ -10,7 +10,7 @@ const addToCart = async (req, res) => {
 			return res.json({ success: false, message: "User not found" });
 		}
 
-		let cartData = userData.cartData || new Map();
+		let cartData = await userData.cartData || new Map();
 
 		if (!cartData.has(req.body.itemId)) {
 			cartData.set(req.body.itemId, { imageId: req.body.itemId, quantity: 1 });
@@ -69,6 +69,7 @@ const removeFromCart = async (req, res) => {
 const getCartItems = async (req, res) => {
 	try {
 		const userData = await userModal.findById(req.body.userId);
+		let cartData = userData.cartData || new Map();
 
 		if (!userData) {
 			return res.json({ success: false, message: "User not found" });
