@@ -1,0 +1,44 @@
+.pleace-order {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	margin-top: 100px;
+}
+.pleace-order-left {
+	width: 100%;
+	max-width: max(30%, 500px);
+}
+.pleace-order-left .title {
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 60px;
+}
+.pleace-order-left input {
+	margin-bottom: 15px;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #c5c5c5;
+	outline-color: tomato;
+}
+.pleace-order-left .multi-fields {
+	display: flex;
+	gap: 10px;
+}
+.pleace-order-rigth {
+	width: 100%;
+	max-width: max(40%, 500px);
+}
+.pleace-order .cart-total {
+	margin-top: 30px;
+}
+.cart-total-button {
+	border: none;
+	color: white;
+	background-color: tomato;
+	width: max(15vw, 200px);
+	padding: 12px 0px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-top: 50px;
+}
